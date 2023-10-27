@@ -1,4 +1,5 @@
 # "Semantic Text Similarity and Entailment Analysis"
+***Project stored as = "Semantic_Similarity_TFIDF_BERT(pooled).ipynb"***
 
 **Objective:** The project aims to find semantically similar sentences in a dataset to a given search query. It employs both TF-IDF vectorization and BERT embeddings to calculate similarity scores.
 
@@ -22,4 +23,43 @@
 
 Overall, the project showcases how to combine traditional TF-IDF techniques with state-of-the-art BERT embeddings to compute semantic similarity and classify textual entailment tasks. It's a practical demonstration of utilizing powerful natural language processing tools to solve real-world tasks involving text data.
 
-# 
+# "Semantic Textual Similarity Predictor (STSP) - BERT(Pooled)"
+***Project stored as = "SemanticSimilarity_SNLI_BERT.ipynb"***
+
+**Project Objective:**
+
+The main objective of the project is to develop a robust natural language processing model that predicts the semantic similarity between pairs of sentences using the Stanford Natural Language Inference (SNLI) corpus. The project encompasses various stages, including data preprocessing, model building, and evaluation.
+
+**Key resposibilities :**
+
+1. **Data Preparation:**
+
+--> **Data Loading:** The project starts by loading the SNLI corpus, containing pairs of sentences and their labels.
+--> **Data Preprocessing:**
+--------> **Check for Null Values:** Ensure data integrity by identifying and handling any missing values.
+--------> **Filter Empty Labels:** Remove records with empty labels, retaining only sentences with valid labels.
+
+2. **Label Encoding:**
+The labels, including "contradiction," "entailment," and "neutral," are one-hot encoded into numerical format (0, 1, and 2).
+
+3. **Data Generator Creation:**
+A custom data generator is developed to efficiently process the data, incorporating sentence pairs, labels, batch size, and the BERT tokenizer for tokenization.
+
+4. **Model Building:**
+A BERT-based (Pooled) model is constructed to predict semantic similarity between sentence pairs.
+
+5. **Model Training:**
+The model is trained using both training and validation data concurrently, optimizing training efficiency by activating use_multiprocessing = True.
+-------> Training Accuracy: 0.934
+-------> Training Loss: 0.196
+-------> Validation Accuracy: 0.849
+-------> Validation Loss: 0.495
+
+6. **Model Evaluation:**
+The model's performance is assessed using test data to evaluate its ability to predict semantic similarity.
+--------> Test Accuracy: 0.8407
+--------> Test Loss: 0.5092
+7. **Inference:**
+Custom sentences are provided to the model to predict similarity scores and labels.
+
+In summary, the model is performing reasonably well, especially in terms of training accuracy. However, the slight decrease in accuracy on validation and test data suggests that there might be room for fine-tuning and optimization to enhance generalization. The model can be considered a good starting point, and further improvements can be explored based on specific project requirements and performance expectations.
