@@ -35,8 +35,11 @@ The main objective of the project is to develop a robust natural language proces
 1. **Data Preparation:**
 
 --> **Data Loading:** The project starts by loading the SNLI corpus, containing pairs of sentences and their labels.
+
 --> **Data Preprocessing:**
+
 --------> **Check for Null Values:** Ensure data integrity by identifying and handling any missing values.
+
 --------> **Filter Empty Labels:** Remove records with empty labels, retaining only sentences with valid labels.
 
 2. **Label Encoding:**
@@ -50,16 +53,20 @@ A BERT-based (Pooled) model is constructed to predict semantic similarity betwee
 
 5. **Model Training:**
 The model is trained using both training and validation data concurrently, optimizing training efficiency by activating use_multiprocessing = True.
+
 -------> Training Accuracy: 0.934
 -------> Training Loss: 0.196
+   
 -------> Validation Accuracy: 0.849
 -------> Validation Loss: 0.495
 
-6. **Model Evaluation:**
+7. **Model Evaluation:**
 The model's performance is assessed using test data to evaluate its ability to predict semantic similarity.
+
 --------> Test Accuracy: 0.8407
 --------> Test Loss: 0.5092
-7. **Inference:**
+
+9. **Inference:**
 Custom sentences are provided to the model to predict similarity scores and labels.
 
 In summary, the model is performing reasonably well, especially in terms of training accuracy. However, the slight decrease in accuracy on validation and test data suggests that there might be room for fine-tuning and optimization to enhance generalization. The model can be considered a good starting point, and further improvements can be explored based on specific project requirements and performance expectations.
