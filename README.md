@@ -74,7 +74,9 @@ In summary, the model is performing reasonably well, especially in terms of trai
 The Stanford Natural Language Inference (SNLI) corpus is a collection of 570k human-written English sentence pairs manually labeled for balanced classification with the labels entailment, contradiction, and neutral.
 
 **Load data**
+
 !curl -LO https://raw.githubusercontent.com/MohamadMerchant/SNLI/master/data.tar.gz
+
 !tar -xvzf data.tar.gz
 
 Dataset Overview:
