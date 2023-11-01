@@ -30,7 +30,7 @@ Overall, the project showcases how to combine traditional TF-IDF techniques with
 
 The main objective of the project is to develop a robust natural language processing model that predicts the semantic similarity between pairs of sentences using the Stanford Natural Language Inference (SNLI) corpus. The project encompasses various stages, including data preprocessing, model building, and evaluation.
 
-**Key resposibilities :**
+**Key responsibilities :**
 
 1. **Data Preparation:**
 
@@ -42,7 +42,7 @@ The main objective of the project is to develop a robust natural language proces
 
 --------> **Filter Empty Labels:** Remove records with empty labels, retaining only sentences with valid labels.
 
-2. **Label Encoding:**
+2. **One-hot Encoding:**
 The labels, including "contradiction," "entailment," and "neutral," are one-hot encoded into numerical format (0, 1, and 2).
 
 3. **Data Generator Creation:**
@@ -70,3 +70,22 @@ The model's performance is assessed using test data to evaluate its ability to p
 Custom sentences are provided to the model to predict similarity scores and labels.
 
 In summary, the model is performing reasonably well, especially in terms of training accuracy. However, the slight decrease in accuracy on validation and test data suggests that there might be room for fine-tuning and optimization to enhance generalization. The model can be considered a good starting point, and further improvements can be explored based on specific project requirements and performance expectations.
+# SNLI Dataset availability
+The Stanford Natural Language Inference (SNLI) corpus is a collection of 570k human-written English sentence pairs manually labeled for balanced classification with the labels entailment, contradiction, and neutral.
+
+**Load data**
+!curl -LO https://raw.githubusercontent.com/MohamadMerchant/SNLI/master/data.tar.gz
+!tar -xvzf data.tar.gz
+
+Dataset Overview:
+
+sentence1: The premise caption that was supplied to the author of the pair.
+sentence2: The hypothesis caption that was written by the author of the pair.
+similarity: This is the label chosen by the majority of annotators.
+Where no majority exists, the label "-" is used (we will skip such samples here).
+
+Here are the "similarity" label values in our dataset:
+
+Contradiction: The sentences share no similarity.
+Entailment: The sentences have similar meaning.
+Neutral: The sentences are neutral.
