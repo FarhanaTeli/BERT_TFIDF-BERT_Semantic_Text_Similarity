@@ -79,7 +79,7 @@ The Stanford Natural Language Inference (SNLI) corpus is a collection of 570k hu
 
 !tar -xvzf data.tar.gz
 
-Dataset Overview:
+**Dataset Overview:**
 
 sentence1: The premise caption that was supplied to the author of the pair.
 sentence2: The hypothesis caption that was written by the author of the pair.
@@ -89,5 +89,7 @@ Where no majority exists, the label "-" is used (we will skip such samples here)
 Here are the "similarity" label values in our dataset:
 
 Contradiction: The sentences share no similarity.
+
 Entailment: The sentences have similar meaning.
+
 Neutral: The sentences are neutral.
